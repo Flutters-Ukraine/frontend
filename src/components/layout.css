@@ -1,4 +1,46 @@
-:root {
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Merriweather Sans'), url('../fonts/merriweather-sans/MerriweatherSans-Regular.otf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merriweather Sans';
+  font-style: normal;
+  font-weight: bold;
+  src: local('Merriweather Sans'), url('../fonts/merriweather-sans/MerriweatherSans-Bold.otf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather Sans", regular;
+}
+
+a {
+  background-color: transparent;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: none;
+}
+
+.layout-wrapper {
+  padding: 0 112px;
+}
+
+
+/* :root {
   --border-radius: 4px;
   --color-text: #333;
   --color-primary: #7026b9;
@@ -43,20 +85,7 @@ body {
   margin: 0;
   word-wrap: break-word;
 }
-a {
-  background-color: transparent;
-  color: var(--color-primary);
-  text-decoration: none;
-  font-weight: 500;
-  text-decoration: underline;
-  text-decoration-thickness: 1.5px;
-  text-underline-offset: 2px;
-}
-a:active,
-a:hover {
-  outline-width: 0;
-  text-decoration: none;
-}
+
 abbr[title] {
   border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);
   cursor: help;
@@ -221,4 +250,4 @@ pre code:after,
 pre tt:before,
 pre tt:after {
   content: none;
-}
+} */
