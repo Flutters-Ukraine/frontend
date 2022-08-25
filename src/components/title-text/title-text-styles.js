@@ -6,5 +6,6 @@ export const TitleWrapper = styled.div`
 
     & h1 {
         padding-top: 20px;
+        margin-bottom: 40px;
     }
 `
