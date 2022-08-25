@@ -4,7 +4,10 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TitleText from '../components/title-text'
+import TitleTextComponent from '../components/title-text'
+import DescriptionTextComponent from '../components/description-text'
+import ScrollDownButtonComponent from '../components/scroll-down-button'
+import { FullScreenBlock } from './index-styles'
 // import * as styles from "../components/index.module.css"
 
 // const links = [
@@ -76,7 +79,15 @@ const IndexPage = () => {
   return (
     <Layout>
       <Seo title="Home" />
-      <TitleText />
+      <FullScreenBlock>
+        <TitleTextComponent />
+      </FullScreenBlock>
+      <FullScreenBlock>
+        <DescriptionTextComponent />
+      </FullScreenBlock>
+      <ScrollDownButtonComponent />
+
+
       {/* <div className={styles.textCenter}>
         <StaticImage
           src="../images/example.png"
