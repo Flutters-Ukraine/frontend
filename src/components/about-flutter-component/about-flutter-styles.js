@@ -1,6 +1,14 @@
 import { Link } from 'gatsby'
 import styled from 'styled-components';
 
-export const DescriptionText = styled.h3`
+export const AboutFlutterWrapper = styled.div`
+
+`
+
+export const AboutFlutterGrid = styled.div`
+
+`
+
+export const AboutFlutterGridItem = styled.div`
 
 `
