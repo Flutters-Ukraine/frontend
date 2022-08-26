@@ -2,10 +2,14 @@ import { Link } from 'gatsby'
 import styled from 'styled-components';
 
 export const HeaderWrapper = styled.header`
+    position: sticky;
+    top: 0;
+    background-color: #fff;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 0;
+    z-index: 2;
 `
 
 export const HeaderLogo = styled(Link)`

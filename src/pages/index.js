@@ -7,7 +7,8 @@ import Seo from "../components/seo"
 import TitleTextComponent from '../components/title-text'
 import DescriptionTextComponent from '../components/description-text'
 import ScrollDownButtonComponent from '../components/scroll-down-button'
-import AboutUsComponent from '../components/about-us-block'
+import AboutUsComponent from '../components/about-us-component'
+import AboutFlutterComponent from '../components/about-flutter-component'
 import { FullScreenBlock } from './index-styles'
 // import * as styles from "../components/index.module.css"
 
@@ -84,6 +85,7 @@ const IndexPage = () => {
         <TitleTextComponent />
       </FullScreenBlock>
       <AboutUsComponent />
+      <AboutFlutterComponent />
 
 
 
