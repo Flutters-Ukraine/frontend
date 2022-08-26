@@ -4,13 +4,15 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import TitleTextComponent from "../components/title-text"
+
+import TitleTextComponent from '../components/title-text'
 import TitleImagesComponent from "../components/title-images"
-import DescriptionTextComponent from "../components/description-text"
-import ScrollDownButtonComponent from "../components/scroll-down-button"
-import AboutUsComponent from "../components/about-us-component"
-import AboutFlutterComponent from "../components/about-flutter-component"
-import { FullScreenBlock } from "./index-styles"
+import DescriptionTextComponent from '../components/description-text'
+import ScrollDownButtonComponent from '../components/scroll-down-button'
+import AboutUsComponent from '../components/about-us-component'
+import AboutFlutterComponent from '../components/about-flutter-component'
+import AboutServicesComponent from '../components/about-services-component'
+import { FullScreenBlock } from './index-styles'
 // import * as styles from "../components/index.module.css"
 
 // const links = [
@@ -86,6 +88,7 @@ const IndexPage = () => {
       </FullScreenBlock>
       <AboutUsComponent />
       <AboutFlutterComponent />
+      <AboutServicesComponent />
 
       <ScrollDownButtonComponent />
 
