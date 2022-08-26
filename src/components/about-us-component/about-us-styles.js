@@ -11,7 +11,7 @@ export const AboutUsGridItem = styled.div`
     justify-content: space-around;
     align-items: center;
 
-    :not(:first-child) {
+    &:not(:first-child) {
         padding-top: 20px;
     }
 `

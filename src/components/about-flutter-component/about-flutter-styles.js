@@ -10,7 +10,7 @@ export const AboutFlutterGrid = styled.div`
     display:grid;
     grid-template-columns: 1fr 1fr;
     grid-row: auto auto;
-    grid-column-gap: 20px;
+    grid-column-gap: 60px;
     grid-row-gap: 200px;
 `
 
