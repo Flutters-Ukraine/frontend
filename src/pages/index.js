@@ -4,7 +4,9 @@ import * as React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+
 import TitleTextComponent from '../components/title-text'
+import TitleImagesComponent from "../components/title-images"
 import DescriptionTextComponent from '../components/description-text'
 import ScrollDownButtonComponent from '../components/scroll-down-button'
 import AboutUsComponent from '../components/about-us-component'
@@ -77,21 +79,18 @@ import { FullScreenBlock } from './index-styles'
 // const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=default-starter`
 
 const IndexPage = () => {
-
-
   return (
     <Layout>
       <Seo title="Home" />
       <FullScreenBlock>
         <TitleTextComponent />
+        <TitleImagesComponent />
       </FullScreenBlock>
       <AboutUsComponent />
       <AboutFlutterComponent />
       <AboutServicesComponent />
 
-
       <ScrollDownButtonComponent />
-
 
       {/* <div className={styles.textCenter}>
         <StaticImage
