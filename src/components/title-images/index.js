@@ -1,23 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { StaticImage } from "gatsby-plugin-image"
-
 import { GridContainer } from "./title-images-styles"
-
-// import {
-//   col1row1,
-//   //   col2row1,
-//   //   col3row1,
-//   //   col3row2,
-//   //   col4row1,
-//   //   col4row2,
-//   //   col5row1,
-//   //   col5row2,
-//   //   col5row3,
-//   //   col5row4,
-//   //   col6row1,
-//   //   col6row2,
-//   //   col6row3,
-// } from "../../images/col1row1.png"
 
 const TitleImagesComponent = () => {
   return (
