@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import { AboutUsGridWrapper, AboutUsGridItem, AboutUsGridItemText, AboutUsGridItemTitle, AboutUsGridItemSubtitle, AboutUsGridItemUl, AboutUsGridItemLi } from '../about-us-grid/about-us-grid-styles'
 import { BsArrowUpRight } from 'react-icons/bs'
-import Img from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const AboutUsGridComponent = () => {
     return (
@@ -22,12 +22,17 @@ const AboutUsGridComponent = () => {
                         </AboutUsGridItemSubtitle>
 
                         <AboutUsGridItemUl>
-                            <AboutUsGridItemLi></AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{' iOS & Android app development  '}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'macOS & Windows app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'ChromeOS app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Web App Development for all modern browsers (Chrome, Safari, Firefox, Edge, Brave)'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Back-End Development'}</AboutUsGridItemLi>
                         </AboutUsGridItemUl>
                     </AboutUsGridItemText>
-                    <Img fixed={'../../../images/grid-image.png'} />
+                    <StaticImage height={600} src="../../images/grid-image.png" alt="A dinosaur" />
                 </AboutUsGridItem>
                 <AboutUsGridItem>
+                    <StaticImage height={600} src="../../images/grid-image.png" alt="A dinosaur" />
                     <AboutUsGridItemText>
                         <AboutUsGridItemTitle>
                             {
@@ -40,7 +45,11 @@ const AboutUsGridComponent = () => {
                             }
                         </AboutUsGridItemSubtitle>
                         <AboutUsGridItemUl>
-                            <AboutUsGridItemLi></AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{' iOS & Android app development  '}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'macOS & Windows app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'ChromeOS app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Web App Development for all modern browsers (Chrome, Safari, Firefox, Edge, Brave)'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Back-End Development'}</AboutUsGridItemLi>
                         </AboutUsGridItemUl>
                     </AboutUsGridItemText>
                 </AboutUsGridItem>
@@ -57,9 +66,14 @@ const AboutUsGridComponent = () => {
                             }
                         </AboutUsGridItemSubtitle>
                         <AboutUsGridItemUl>
-                            <AboutUsGridItemLi></AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{' iOS & Android app development  '}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'macOS & Windows app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'ChromeOS app development'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Web App Development for all modern browsers (Chrome, Safari, Firefox, Edge, Brave)'}</AboutUsGridItemLi>
+                            <AboutUsGridItemLi>{'Back-End Development'}</AboutUsGridItemLi>
                         </AboutUsGridItemUl>
                     </AboutUsGridItemText>
+                    <StaticImage height={600} src="../../images/grid-image.png" alt="A dinosaur" />
                 </AboutUsGridItem>
             </AboutUsGridWrapper>
         </>
