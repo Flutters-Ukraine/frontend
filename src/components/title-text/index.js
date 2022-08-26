@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react'
-import { TitleWrapper } from '../../components/title-text/title-text-styles'
-import ActionButtonComponent from '../action-button'
-
+import React, { useState, useEffect } from "react"
+import { TitleWrapper } from "../../components/title-text/title-text-styles"
+import ActionButtonComponent from "../action-button"
+import TitleImagesComponent from "../title-images"
 
 const TitleTextComponent = () => {
-    return (
-        <>
-            <TitleWrapper>
-                <h2>Develop. Maintain. Consult.</h2>
-                <h1>Flutter Development Experts<br />for your Start-Up</h1>
-                <ActionButtonComponent />
-            </TitleWrapper>
-        </>
-    )
+  return (
+    <>
+      <TitleWrapper>
+        <h2>Develop. Maintain. Consult.</h2>
+        <h1>
+          Flutter Development Experts
+          <br />
+          for your Start-Up
+        </h1>
+        <ActionButtonComponent />
+      </TitleWrapper>
+    </>
+  )
 }
-
-
 
 export default TitleTextComponent
