@@ -38,37 +38,7 @@ export const HeaderNavMenu = styled.nav`
     }
 `
 
-export const MenuToggle = styled.input.attrs({ type: 'checkbox' })`
-    position: absolute;
-    display: block;
-    height: 32px;
-    width: 32px;
-    top: 20px;
-    right: 20px;
-    z-index: 5;
-    opacity: 0;
-    cursor: pointer;
 
-    &:checked ~ ${HeaderNavList}{ 
-        transform: translateX(0);
-    }
-
-    &:checked ~ ${HamburgerLines} .line1{ 
-        transform: rotate(45deg);
-    }
-
-    &:checked ~ ${HamburgerLines} .line2{ 
-        transform: scaleY(0);
-    }
-    
-    &:checked ~ ${HamburgerLines} .line3{ 
-        transform: rotate(-45deg);
-    }
-
-    transform: rotate(-45deg);
-    &:checked ~ ${HamburgerLines} .line3{ 
-    }
-`
 
 export const HamburgerLines = styled.div`
     display: none;
@@ -101,14 +71,6 @@ export const HamburgerLines = styled.div`
     }
 `
 
-export const HamburgerLine = styled.span`
-    display: block;
-    height: 4px;
-    width: 100%;
-    border-radius: 10px;
-    background: black;
-`
-
 export const HeaderNavList = styled.ul`
     display: flex;
     flex-direction: row;
@@ -123,6 +85,46 @@ export const HeaderNavList = styled.ul`
        justify-content: center;
        align-items: center;
     }
+`
+
+export const MenuToggle = styled.input.attrs({ type: 'checkbox' })`
+    position: absolute;
+    display: block;
+    height: 32px;
+    width: 32px;
+    top: 20px;
+    right: 20px;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked ~ ${HeaderNavList}{ 
+        transform: translateX(0);
+    }
+
+    &:checked ~ ${HamburgerLines} .line1{ 
+        transform: rotate(45deg);
+    }
+
+    &:checked ~ ${HamburgerLines} .line2{ 
+        transform: scaleY(0);
+    }
+    
+    &:checked ~ ${HamburgerLines} .line3{ 
+        transform: rotate(-45deg);
+    }
+
+    transform: rotate(-45deg);
+    &:checked ~ ${HamburgerLines} .line3{ 
+    }
+`
+
+export const HamburgerLine = styled.span`
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: black;
 `
 
 export const NavItem = styled.li`

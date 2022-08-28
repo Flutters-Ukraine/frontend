@@ -7,12 +7,11 @@ import Seo from "../components/seo"
 
 import TitleTextComponent from '../components/title-text'
 import TitleImagesComponent from "../components/title-images"
-import DescriptionTextComponent from '../components/description-text'
 import ScrollDownButtonComponent from '../components/scroll-down-button'
 import AboutUsComponent from '../components/about-us-component'
 import AboutFlutterComponent from '../components/about-flutter-component'
 import AboutServicesComponent from '../components/about-services-component'
-import { FullScreenBlock } from './index-styles'
+import { FullScreenBlock } from '../components/index-styles'
 // import * as styles from "../components/index.module.css"
 
 // const links = [
@@ -80,19 +79,20 @@ import { FullScreenBlock } from './index-styles'
 
 const IndexPage = () => {
   return (
-    <Layout>
-      <Seo title="Home" />
-      <FullScreenBlock>
-        <TitleTextComponent />
-        <TitleImagesComponent />
-      </FullScreenBlock>
-      <AboutUsComponent />
-      <AboutFlutterComponent />
-      <AboutServicesComponent />
+    <>
+      <Layout>
+        <Seo title="Home" />
+        <FullScreenBlock>
+          <TitleTextComponent />
+          <TitleImagesComponent />
+        </FullScreenBlock>
+        <AboutUsComponent />
+        <AboutFlutterComponent />
+        <AboutServicesComponent />
 
-      <ScrollDownButtonComponent />
+        <ScrollDownButtonComponent />
 
-      {/* <div className={styles.textCenter}>
+        {/* <div className={styles.textCenter}>
         <StaticImage
           src="../images/example.png"
           loading="eager"
@@ -136,7 +136,8 @@ const IndexPage = () => {
           {i !== moreLinks.length - 1 && <> · </>}
         </React.Fragment>
       ))}  */}
-    </Layout>
+      </Layout>
+    </>
   )
 }
 

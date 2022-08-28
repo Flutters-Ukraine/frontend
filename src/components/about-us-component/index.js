@@ -1,6 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
-import { BsArrowUpRight } from 'react-icons/bs'
+import React from 'react'
 import DescriptionTextComponent from '../description-text'
 import { AboutUsGridWrapper, AboutUsGridItem, AboutUsGridItemText, AboutUsGridItemTitle, AboutUsGridItemSubtitle, AboutUsGridItemUl, AboutUsGridItemLi } from '../about-us-component/about-us-styles'
 import { StaticImage } from "gatsby-plugin-image"

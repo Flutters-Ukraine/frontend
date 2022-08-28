@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import DescriptionTextComponent from '../description-text'
 import { AboutFlutterWrapper, AboutFlutterGrid, AboutFlutterGridItem, AboutFlutterGridItemTitle, AboutFlutterGridItemText } from '../about-flutter-component/about-flutter-styles'
 

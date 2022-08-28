@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-import { BsArrowUpRight } from 'react-icons/bs'
+import React from 'react'
 import DescriptionTextComponent from '../description-text'
 import { AboutServicesWrapper, AboutServicesList, AboutServicesListItem, AboutServicesListItemText } from '../about-services-component/about-services-styles'
 

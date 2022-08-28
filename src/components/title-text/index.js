@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import { TitleWrapper } from "../../components/title-text/title-text-styles"
 import ActionButtonComponent from "../action-button"
-import TitleImagesComponent from "../title-images"
 
 const TitleTextComponent = () => {
   return (

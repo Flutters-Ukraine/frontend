@@ -1,7 +1,6 @@
 
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { DescriptionText } from '../../components/description-text/description-text-styles'
-import { BsArrowUpRight } from 'react-icons/bs'
 
 const DescriptionTextComponent = ({ center, text }) => {
     return (

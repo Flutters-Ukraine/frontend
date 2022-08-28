@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { HeaderWrapper, HeaderIcon, HeaderLogo, HeaderNavMenu, NavItem, NavLink, HeaderNavList, LanguageSpan, MenuToggle, HamburgerLines, HamburgerLine, } from './header-styles'
+import React, { useState } from 'react'
+import { HeaderWrapper, HeaderLogo, HeaderNavMenu, NavItem, NavLink, HeaderNavList, LanguageSpan, MenuToggle, HamburgerLines, HamburgerLine, } from './header-styles'
 
 const Header = () => {
 
