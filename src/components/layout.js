@@ -19,9 +19,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Header />
       <div className="layout-wrapper">
         {/* <Navbar /> */}
-        <Header />
+
         <main>{children}</main>
       </div>
     </>

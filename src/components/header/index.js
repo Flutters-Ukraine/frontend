@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { HeaderWrapper, HeaderIcon, HeaderLogo, HeaderNavMenu, NavItem, NavLink, HeaderNavList, LanguageSpan } from './header-styles'
+import { HeaderWrapper, HeaderIcon, HeaderLogo, HeaderNavMenu, NavItem, NavLink, HeaderNavList, LanguageSpan, MenuToggle, HamburgerLines, HamburgerLine, } from './header-styles'
 
 const Header = () => {
 
@@ -13,6 +13,12 @@ const Header = () => {
                 <HeaderLogo to="/">
                     LOGO
                 </HeaderLogo>
+                <MenuToggle />
+                <HamburgerLines>
+                    <HamburgerLine className="line1"></HamburgerLine>
+                    <HamburgerLine className="line2"></HamburgerLine>
+                    <HamburgerLine className="line3"></HamburgerLine>
+                </HamburgerLines>
                 <HeaderNavMenu>
                     <HeaderNavList>
                         <NavItem >

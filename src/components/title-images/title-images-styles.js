@@ -3,7 +3,8 @@ import styled from "styled-components"
 
 export const GridContainer = styled.div`
   max-width: 960px;
-  top: 100px;
+  z-index: -1;
+  top: 200px;
   right: 0px;
   position: absolute;
   padding: 10px;
