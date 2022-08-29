@@ -62,7 +62,7 @@ import { FullScreenBlock } from '../components/index-styles'
 //   },
 //   {
 //     text: "Starters",
-//     url: "https://gatsbyjs.com/starters/",
+//     url: "https://gatsbyjs.com/starters/",ну я 
 //   },
 //   {
 //     text: "Showcase",
