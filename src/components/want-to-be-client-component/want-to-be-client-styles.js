@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const GridWrapper = styled.div``
 
 export const GridContainer = styled.div`
+    overflow-x: hidden;
     position: absolute; 
     left: 0;
     right: 0;
@@ -10,8 +11,8 @@ export const GridContainer = styled.div`
     padding: 0 10px;
     display: grid;
     grid-gap: 5px;
-    grid-template-columns: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
-    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 
     & * {
         border-radius: 10px;
@@ -53,12 +54,12 @@ export const GridContainer = styled.div`
         grid-row: 5/9;
     }
     .p9 {
-        grid-column: 16/20;
+        grid-column: 16/19;
         grid-row: 5/8;
     }
 
     .p10 {
-        grid-column: 1/4;
+        grid-column: 2/4;
         grid-row: 7/11;
     }
     .p11 {
@@ -78,8 +79,8 @@ export const GridContainer = styled.div`
         grid-row: 9/13;
     }
     .p15 {
-        grid-column: 16/20;
-        grid-row: 8/11;
+        grid-column: 16/19;
+        grid-row: 8/10;
     }
 `
 
