@@ -18,7 +18,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <div className="layout-wrapper">
         <main>{children}</main>
       </div>

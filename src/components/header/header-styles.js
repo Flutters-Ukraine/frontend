@@ -113,10 +113,6 @@ export const MenuToggle = styled.input.attrs({ type: 'checkbox' })`
     &:checked ~ ${HamburgerLines} .line3{ 
         transform: rotate(-45deg);
     }
-
-    transform: rotate(-45deg);
-    &:checked ~ ${HamburgerLines} .line3{ 
-    }
 `
 
 export const HamburgerLine = styled.span`

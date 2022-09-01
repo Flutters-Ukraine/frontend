@@ -16,7 +16,7 @@ export const AboutServicesListItem = styled.div`
     flex: 1 ;
     border: 1px solid var(--color-action);
     border-radius: 10px;
-    padding: 35px 30px;
+    padding: 35px 15px;
     display: flex;
     justify-content: center;
     align-content: center;

@@ -2,7 +2,7 @@
 import styled from "styled-components"
 
 export const GridContainer = styled.div`
-  max-width: 960px;
+  /* max-width: 960px; */
   z-index: -1;
   top: 200px;
   right: 0px;

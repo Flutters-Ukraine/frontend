@@ -18,7 +18,7 @@ export const AboutFlutterGridItem = styled.div`
 `
 
 export const AboutFlutterGridItemTitle = styled.h4`
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: 500;
 
 	@media screen and (max-width: 1024px) {

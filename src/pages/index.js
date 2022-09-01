@@ -11,6 +11,7 @@ import ScrollDownButtonComponent from '../components/scroll-down-button'
 import AboutUsComponent from '../components/about-us-component'
 import AboutFlutterComponent from '../components/about-flutter-component'
 import AboutServicesComponent from '../components/about-services-component'
+import WantToBeClientComponent from '../components/want-to-be-client-component'
 import { FullScreenBlock } from '../components/index-styles'
 // import * as styles from "../components/index.module.css"
 
@@ -81,7 +82,7 @@ const IndexPage = () => {
   return (
     <>
       <Layout>
-        <Seo title="Home" />
+        <Seo title="Flutter Development Team for Your Startup or Company" />
         <FullScreenBlock>
           <TitleTextComponent />
           <TitleImagesComponent />
@@ -89,6 +90,7 @@ const IndexPage = () => {
         <AboutUsComponent />
         <AboutFlutterComponent />
         <AboutServicesComponent />
+        <WantToBeClientComponent />
 
         <ScrollDownButtonComponent />
 
@@ -141,6 +143,6 @@ const IndexPage = () => {
   )
 }
 
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Flutters Ukraine is a leading development company that highly focused on Flutter and cross-platform development" />
 
 export default IndexPage

@@ -29,7 +29,7 @@ export const AboutUsGridItemText = styled.div`
 `
 
 export const AboutUsGridItemTitle = styled.h3`
-    font-size: 50px;
+    font-size: 35px;
     font-weight: 600;
 
     @media screen and (max-width: 1024px) {
