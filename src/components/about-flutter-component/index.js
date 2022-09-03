@@ -1,7 +1,13 @@
 
 import React from 'react'
 import DescriptionTextComponent from '../description-text'
-import { AboutFlutterWrapper, AboutFlutterGrid, AboutFlutterGridItem, AboutFlutterGridItemTitle, AboutFlutterGridItemText } from '../about-flutter-component/about-flutter-styles'
+import {
+    AboutFlutterWrapper,
+    AboutFlutterGrid,
+    AboutFlutterGridItem,
+    AboutFlutterGridItemTitle,
+    AboutFlutterGridItemText
+} from './about-flutter-styles'
 
 const AboutFlutterComponent = () => {
     return (

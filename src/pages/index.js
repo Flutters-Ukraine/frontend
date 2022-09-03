@@ -12,7 +12,7 @@ import AboutUsComponent from '../components/about-us-component'
 import AboutFlutterComponent from '../components/about-flutter-component'
 import AboutServicesComponent from '../components/about-services-component'
 import WantToBeClientComponent from '../components/want-to-be-client-component'
-import { FullScreenBlock } from '../components/index-styles'
+import { FullScreenBlock, PaddingWrappper, } from '../components/index-styles'
 // import * as styles from "../components/index.module.css"
 
 // const links = [
@@ -83,16 +83,21 @@ const IndexPage = () => {
     <>
       <Layout>
         <Seo title="Flutter Development Team for Your Startup or Company" />
-        <FullScreenBlock>
-          <TitleTextComponent />
-          <TitleImagesComponent />
-        </FullScreenBlock>
-        <AboutUsComponent />
-        <AboutFlutterComponent />
-        <AboutServicesComponent />
+        <PaddingWrappper>
+          <FullScreenBlock>
+            <TitleTextComponent />
+            <TitleImagesComponent />
+          </FullScreenBlock>
+          <AboutUsComponent />
+          <AboutFlutterComponent />
+          <AboutServicesComponent />
+        </PaddingWrappper>
         <WantToBeClientComponent />
 
-        <ScrollDownButtonComponent />
+
+        <PaddingWrappper>
+          <ScrollDownButtonComponent />
+        </PaddingWrappper>
 
         {/* <div className={styles.textCenter}>
         <StaticImage

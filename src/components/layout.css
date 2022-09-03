@@ -12,17 +12,19 @@
   src: local('Merriweather Sans'), url('../fonts/merriweather-sans/MerriweatherSans-Bold.otf') format('truetype');
 }
 
-* {
+*,
+:before,
+:after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Merriweather Sans", regular;
 }
 
-html,
+/* html,
 body {
   overflow-x: hidden;
-}
+} */
 
 a {
   background-color: transparent;
@@ -36,9 +38,9 @@ a:hover {
   text-decoration: none;
 }
 
-.layout-wrapper {
+/* .layout-wrapper {
   padding: 0 110px;
-}
+} */
 
 
 :root {

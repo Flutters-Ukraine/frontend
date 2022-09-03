@@ -1,7 +1,15 @@
 
 import React from 'react'
 import DescriptionTextComponent from '../description-text'
-import { AboutUsGridWrapper, AboutUsGridItem, AboutUsGridItemText, AboutUsGridItemTitle, AboutUsGridItemSubtitle, AboutUsGridItemUl, AboutUsGridItemLi } from '../about-us-component/about-us-styles'
+import {
+    AboutUsGridWrapper,
+    AboutUsGridItem,
+    AboutUsGridItemText,
+    AboutUsGridItemTitle,
+    AboutUsGridItemSubtitle,
+    AboutUsGridItemUl,
+    AboutUsGridItemLi,
+} from './about-us-styles'
 import { StaticImage } from "gatsby-plugin-image"
 
 const AboutUsComponent = () => {

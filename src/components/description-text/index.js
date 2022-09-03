@@ -1,6 +1,6 @@
 
 import React from 'react'
-import { DescriptionText } from '../../components/description-text/description-text-styles'
+import { DescriptionText } from './description-text-styles'
 
 const DescriptionTextComponent = ({ center, text }) => {
     return (

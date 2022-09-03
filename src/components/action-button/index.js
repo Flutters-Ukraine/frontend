@@ -1,11 +1,11 @@
 import React from 'react'
-import { ActionButton } from '../../components/action-button/action-button-styles'
+import { ActionButton } from './action-button-styles'
 import { BsArrowUpRight } from 'react-icons/bs'
 
-const ActionButtonComponent = () => {
+const ActionButtonComponent = (props) => {
     return (
         <>
-            <ActionButton>{'Let\'s create it together'} <BsArrowUpRight height={15} /></ActionButton>
+            <ActionButton onClick={props.onClick} >{props.text} <BsArrowUpRight height={15} /></ActionButton>
         </>
     )
 }

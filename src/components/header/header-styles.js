@@ -6,6 +6,7 @@ export const HeaderWrapper = styled.header`
     top: 0;
     background-color: #fff;
     display: flex;
+    /* height: 50px; */
     flex-direction: row;
     justify-content: space-between;
     padding: 20px 110px;

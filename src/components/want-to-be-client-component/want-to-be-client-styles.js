@@ -1,12 +1,8 @@
 import styled from 'styled-components';
 
-export const GridWrapper = styled.div``
 
 export const GridContainer = styled.div`
     overflow-x: hidden;
-    position: absolute; 
-    left: 0;
-    right: 0;
     margin-top: 150px;
     padding: 0 10px;
     display: grid;
@@ -18,6 +14,7 @@ export const GridContainer = styled.div`
         border-radius: 10px;
     }
 
+    //1st row
     .p1 {
         grid-column: 3/6;
         grid-row: 1/5;
@@ -40,7 +37,7 @@ export const GridContainer = styled.div`
         grid-row: 1/5;
     }
 
-
+    //2nd row
     .p6 {
         grid-column: 1/4;
         grid-row: 5/7;
@@ -58,6 +55,7 @@ export const GridContainer = styled.div`
         grid-row: 5/8;
     }
 
+    //3rd row
     .p10 {
         grid-column: 2/4;
         grid-row: 7/11;
@@ -103,6 +101,10 @@ export const ActionText = styled.span`
     vertical-align: middle;
     text-align: center;
     font-size: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media screen and (max-width: 1024px) {
         font-size: 20px;

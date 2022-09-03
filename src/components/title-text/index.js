@@ -12,7 +12,7 @@ const TitleTextComponent = () => {
           <br />
           for your Start-Up
         </h1>
-        <ActionButtonComponent />
+        <ActionButtonComponent onClick={() => console.log('click title')} text={'Let\'s create it together'} />
       </TitleWrapper>
     </>
   )
