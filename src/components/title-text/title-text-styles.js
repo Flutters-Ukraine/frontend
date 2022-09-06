@@ -9,4 +9,8 @@ export const TitleWrapper = styled.div`
     padding-top: 20px;
     margin-bottom: 40px;
   }
+
+  @media screen and (max-width: 760px) {
+    top: 400px;
+  }
 `

@@ -64,4 +64,8 @@ export const GridContainer = styled.div`
     grid-column: 6/8;
     grid-row: 5/8;
   }
+
+  @media screen and (max-width: 760px) {
+    top: 400px;
+  }
 `

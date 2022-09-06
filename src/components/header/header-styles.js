@@ -12,6 +12,10 @@ export const HeaderWrapper = styled.header`
     padding: 20px 110px;
     z-index: 2;
     box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+
+    @media screen and (max-width: 960px) {
+        padding: 20px 50px;
+    }
 `
 
 export const HeaderLogo = styled(Link)`
@@ -28,6 +32,7 @@ export const HeaderNavMenu = styled.nav`
     font-size: 18px;
 
     @media screen and (max-width: 960px) {
+        transform: translateX(-150%);
         position: absolute;
         top: 0;
         margin-top: 50px;
@@ -49,13 +54,8 @@ export const HamburgerLines = styled.div`
     top: 17px;
     right: 20px;
     z-index: 2;
-    display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @media screen and (max-width: 960px) {
-        display: block;
-    }
 
     & .line1 {
         transform-origin: 0% 0%;
@@ -70,6 +70,10 @@ export const HamburgerLines = styled.div`
         transform-origin: 0% 0%;
         transition: transform 0.4s ease-in-out;
     }
+
+    @media screen and (max-width: 960px) {
+        display: flex;
+    }
 `
 
 export const HeaderNavList = styled.ul`
@@ -80,17 +84,17 @@ export const HeaderNavList = styled.ul`
     text-align: center;
 
     @media screen and (max-width: 960px) {
-       /* margin-top: 50px; */
-       flex-direction: column;
-       width: 100%;
-       justify-content: center;
-       align-items: center;
+        /* margin-top: 50px; */
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        /* transform: translate(-150%); */
     }
 `
 
 export const MenuToggle = styled.input.attrs({ type: 'checkbox' })`
     position: absolute;
-    display: block;
     height: 32px;
     width: 32px;
     top: 20px;
@@ -114,6 +118,14 @@ export const MenuToggle = styled.input.attrs({ type: 'checkbox' })`
     &:checked ~ ${HamburgerLines} .line3{ 
         transform: rotate(-45deg);
     }
+
+    &:checked ~ ${HeaderNavMenu} {
+        transform: translateX(0) !important;
+    }
+
+    /* @media screen and (min-width: 960px) {
+        display: block;
+    } */
 `
 
 export const HamburgerLine = styled.span`
@@ -122,6 +134,10 @@ export const HamburgerLine = styled.span`
     width: 100%;
     border-radius: 10px;
     background: black;
+    
+    /* @media screen and (min-width: 960px) {
+        display: none;
+    } */
 `
 
 export const NavItem = styled.li`
@@ -133,6 +149,7 @@ export const NavItem = styled.li`
 
     @media screen and (max-width: 960px) {
         transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        padding-bottom: 30px;
     }
 `
 

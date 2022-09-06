@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const FooterWrapper = styled.footer`
     padding: 0 110px;
     margin-top: 100px;
+
+    @media screen and (max-width: 960px) {
+        padding: 0 50px;
+    }
 `
 
 export const FooterHead = styled.div`
@@ -223,7 +227,8 @@ export const ContactFormDetailsInputWrapper = styled.div`
 export const FooterBottom = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin: 50px 0;
+    align-items: center;
 `
 
 export const ActionButton = styled.button`
