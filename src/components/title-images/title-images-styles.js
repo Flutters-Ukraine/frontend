@@ -68,4 +68,8 @@ export const GridContainer = styled.div`
   @media screen and (max-width: 760px) {
     top: 400px;
   }
+
+  @media screen and (max-width: 420px) {
+    top: 600px;
+  }
 `
