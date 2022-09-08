@@ -74,20 +74,18 @@ const AboutUsComponent = () => {
             </AboutUsGridItemSubtitle>
             <AboutUsGridItemUl>
               <AboutUsGridItemLi>
-                {" iOS & Android app development  "}
+                {
+                  "Using of ready-to-go app templates to reduce app development time and costs "
+                }
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>
-                {"macOS & Windows app development"}
-              </AboutUsGridItemLi>
-              <AboutUsGridItemLi>
-                {"ChromeOS app development"}
+                {"Writing tests to decrease bugs during development process  "}
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>
                 {
-                  "Web App Development for all modern browsers (Chrome, Safari, Firefox, Edge, Brave)"
+                  "Working with Agile approach to increase flexibility during development process"
                 }
               </AboutUsGridItemLi>
-              <AboutUsGridItemLi>{"Back-End Development"}</AboutUsGridItemLi>
             </AboutUsGridItemUl>
           </AboutUsGridItemText>
         </AboutUsGridItem>
@@ -105,17 +103,17 @@ const AboutUsComponent = () => {
             </AboutUsGridItemSubtitle>
             <AboutUsGridItemUl>
               <AboutUsGridItemLi>
-                {" iOS & Android app development  "}
+                {"Stunning app designs, perfect user experiences"}
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>
-                {"macOS & Windows app development"}
+                {"Users needs and market research with prototyping"}
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>
-                {"ChromeOS app development"}
+                {"Modern animations for your apps"}
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>
                 {
-                  "Web App Development for all modern browsers (Chrome, Safari, Firefox, Edge, Brave)"
+                  "Back-end development with using modern cloud technologies such as Firebase, AWS, etc"
                 }
               </AboutUsGridItemLi>
               <AboutUsGridItemLi>{"Back-End Development"}</AboutUsGridItemLi>

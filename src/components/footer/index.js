@@ -34,6 +34,8 @@ import facebookIcon from "../../images/icons/facebook.svg"
 import linkedinIcon from "../../images/icons/linkedin.svg"
 import twitterIcon from "../../images/icons/twitter.svg"
 import pinIcon from "../../images/icons/pin.svg"
+import { Script } from "gatsby"
+import Helmet from "react-helmet"
 
 const Footer = () => {
   const services = [
@@ -50,6 +52,9 @@ const Footer = () => {
 
   return (
     <>
+      <Helmet>
+        <Script src="https://smtpjs.com/v3/smtp.js" />
+      </Helmet>
       <FooterWrapper id="contactUs">
         <FooterHead>
           <FooterContactsWrapper>
@@ -133,7 +138,7 @@ const Footer = () => {
                   <ContactFormInputLabel>{"Name"}</ContactFormInputLabel>
                 </ContactFormInputGroup>
                 <ContactFormInputGroup>
-                  <ContactFormInput required type="text" />
+                  <ContactFormInput required type="email" />
                   <ContactFormInputHighlight />
                   <ContactFormInputBar />
                   <ContactFormInputLabel>{"Email"}</ContactFormInputLabel>
