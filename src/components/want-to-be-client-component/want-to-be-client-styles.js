@@ -106,6 +106,12 @@ export const ActionText = styled.span`
   flex-direction: column;
   justify-content: center;
 
+  & a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+  }
+
   @media screen and (max-width: 1024px) {
     font-size: 20px;
   }

@@ -134,7 +134,6 @@ export const ContactFormService = styled.div`
   &.active {
     background: var(--color-action);
     color: white;
-    font-size: 26px;
   }
 
   @media screen and (max-width: 420px) {

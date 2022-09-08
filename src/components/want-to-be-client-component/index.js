@@ -46,9 +46,13 @@ const WantToBeClientComponent = () => {
           src="../../images/row2col2.png"
           alt="c7r1"
         />
+
         <ActionTextWrapper>
-          <ActionText>{"Want to be our client?"}</ActionText>
+          <ActionText>
+            <a href="#contactUs">{"Want to be our client?"}</a>
+          </ActionText>
         </ActionTextWrapper>
+
         <StaticImage
           className="p8"
           src="../../images/row2col3.png"

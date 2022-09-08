@@ -42,11 +42,15 @@ const Footer = () => {
     "Migration from other technologies",
   ]
 
-  const [selectedServices, setSelectedServices] = useState([])
+  const [applicationDevelopmentService, setApplicationDevelopmentService] =
+    useState(false)
+  const [developmentAdviceService, setDevelopmentAdviceService] =
+    useState(false)
+  const [migrationService, setMigrationService] = useState(false)
 
   return (
     <>
-      <FooterWrapper>
+      <FooterWrapper id="contactUs">
         <FooterHead>
           <FooterContactsWrapper>
             <FooterContactsTitle>{"Contacts"}</FooterContactsTitle>
@@ -84,53 +88,41 @@ const Footer = () => {
             <ContactFormSubtitle>{"Services"}</ContactFormSubtitle>
             <ContactFormServicesList>
               <ContactFormService
-                className={`${
-                  selectedServices.indexOf(services[0]) >= 0 ? "active" : ""
-                } `}
-                onClick={function () {
-                  let tempServices = []
-                  if (selectedServices.includes(services[0])) {
-                    tempServices = selectedServices.filter(
-                      item => item !== services[0]
-                    )
+                className={`${applicationDevelopmentService ? "active" : ""} `}
+                onClick={() => {
+                  if (applicationDevelopmentService) {
+                    setApplicationDevelopmentService(false)
                   } else {
-                    tempServices = selectedServices.push(services[0])
+                    setApplicationDevelopmentService(true)
                   }
-                  setSelectedServices(tempServices)
                 }}
-              >{`${services[0]}`}</ContactFormService>
+              >
+                {`${services[0]}`}
+              </ContactFormService>
               <ContactFormService
-                className={`${
-                  selectedServices.indexOf(services[1]) >= 0 ? "active" : ""
-                } `}
-                onClick={function () {
-                  let tempServices = []
-                  if (selectedServices.includes(services[1])) {
-                    tempServices = selectedServices.filter(
-                      item => item !== services[1]
-                    )
+                className={`${developmentAdviceService ? "active" : ""} `}
+                onClick={() => {
+                  if (developmentAdviceService) {
+                    setDevelopmentAdviceService(false)
                   } else {
-                    tempServices = selectedServices.push(services[1])
+                    setDevelopmentAdviceService(true)
                   }
-                  setSelectedServices(tempServices)
                 }}
-              >{`${services[1]}`}</ContactFormService>
+              >
+                {`${services[1]}`}
+              </ContactFormService>
               <ContactFormService
-                className={`${
-                  selectedServices.indexOf(services[2]) >= 0 ? "active" : ""
-                } `}
-                onClick={function () {
-                  let tempServices = []
-                  if (selectedServices.includes(services[2])) {
-                    tempServices = selectedServices.filter(
-                      item => item !== services[2]
-                    )
+                className={`${migrationService ? "active" : ""} `}
+                onClick={() => {
+                  if (migrationService) {
+                    setMigrationService(false)
                   } else {
-                    tempServices = selectedServices.push(services[2])
+                    setMigrationService(true)
                   }
-                  setSelectedServices(tempServices)
                 }}
-              >{`${services[2]}`}</ContactFormService>
+              >
+                {`${services[2]}`}
+              </ContactFormService>
             </ContactFormServicesList>
             <ContactForm>
               <ContactFormBlock>

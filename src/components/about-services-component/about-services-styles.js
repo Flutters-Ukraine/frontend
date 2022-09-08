@@ -30,6 +30,12 @@ export const AboutServicesListItem = styled.div`
     margin-left: 20px;
   }
 
+  & a {
+    text-decoration: none;
+    outline: none;
+    color: black;
+  }
+
   @media screen and (max-width: 420px) {
     &:not(:first-child) {
       margin: 0;

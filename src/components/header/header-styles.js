@@ -154,7 +154,7 @@ export const NavItem = styled.li`
   }
 `
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
   color: black;
   display: flex;
   align-items: center;
