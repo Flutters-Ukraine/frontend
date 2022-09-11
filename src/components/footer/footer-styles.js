@@ -18,6 +18,8 @@ export const FooterHead = styled.div`
   }
 `
 
+export const FormWrapper = styled.form``
+
 export const FooterContactsWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -68,7 +70,7 @@ export const FooterTitle = styled.h3`
   font-size: 30px;
 `
 
-export const FooterBody = styled.form`
+export const FooterBody = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 50px;
