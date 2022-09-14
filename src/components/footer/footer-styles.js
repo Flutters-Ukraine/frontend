@@ -3,6 +3,8 @@ import styled from "styled-components"
 export const FooterWrapper = styled.footer`
   padding: 0 110px;
   margin-top: 100px;
+  max-width: 1210px;
+  margin: 0 auto;
 
   @media screen and (max-width: 960px) {
     padding: 0 50px;
@@ -12,6 +14,7 @@ export const FooterWrapper = styled.footer`
 export const FooterHead = styled.div`
   display: flex;
   flex-direction: row;
+  /* justify-content: space-between; */
 
   @media screen and (max-width: 960px) {
     flex-direction: column-reverse;
@@ -74,6 +77,7 @@ export const FooterBody = styled.div`
   display: flex;
   flex-direction: row;
   margin-top: 50px;
+  /* justify-content: space-between; */
 
   @media screen and (max-width: 960px) {
     flex-direction: column;
@@ -185,6 +189,42 @@ export const ContactFormInput = styled.input`
     color: var(--color-action);
   }
 
+  &:valid ~ label {
+    top: -14px;
+    color: $hl-color;
+  }
+
+  &:focus ~ ${ContactFormInputBar}:before {
+    width: 100%;
+  }
+`
+
+export const ContactFormTextArea = styled.textarea`
+  background: none;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  border: none;
+  border-radius: 0;
+  color: black;
+  border-bottom: 1px solid black;
+  width: 100%;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: var(--color-action);
+  }
+
+  &:valid ~ label {
+    top: -14px;
+    font-size: 12px;
+    color: $hl-color;
+  }
+
   &:focus ~ ${ContactFormInputBar}:before {
     width: 100%;
   }
@@ -250,3 +290,13 @@ export const FooterBottom = styled.div`
 `
 
 export const ActionButton = styled.button``
+
+export const ImageUploadWrapper = styled.div`
+  & > input {
+    display: none;
+  }
+`
+
+export const FileInputLabel = styled.label``
+
+export const FileInput = styled.input``

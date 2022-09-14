@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useRef } from "react"
 import {
   FooterWrapper,
   FooterHead,
@@ -20,6 +20,7 @@ import {
   ContactFormBlock,
   ContactFormInputGroup,
   ContactFormInput,
+  ContactFormTextArea,
   ContactFormInputHighlight,
   ContactFormInputBar,
   ContactFormInputLabel,
@@ -27,6 +28,9 @@ import {
   FooterCopyright,
   FooterBottom,
   FormWrapper,
+  ImageUploadWrapper,
+  FileInputLabel,
+  FileInput,
 } from "./footer-styles"
 import ActionButtonComponent from "../action-button"
 import behanceIcon from "../../images/icons/behance.svg"
@@ -35,10 +39,11 @@ import facebookIcon from "../../images/icons/facebook.svg"
 import linkedinIcon from "../../images/icons/linkedin.svg"
 import twitterIcon from "../../images/icons/twitter.svg"
 import pinIcon from "../../images/icons/pin.svg"
-import { Script } from "gatsby"
-import Helmet from "react-helmet"
+import emailjs from "@emailjs/browser"
 
 const Footer = () => {
+  const form = useRef()
+
   const services = [
     "Application development",
     "Development advice",
@@ -50,22 +55,62 @@ const Footer = () => {
   const [developmentAdviceService, setDevelopmentAdviceService] =
     useState(false)
   const [migrationService, setMigrationService] = useState(false)
+  const [templateParams, setTemplateParams] = useState({})
+
+  const handleInputNameChange = e => {
+    setTemplateParams((templateParams["from_name"] = e.target.value))
+  }
+
+  const handleInputEmailChange = e => {
+    setTemplateParams((templateParams["from_email"] = e.target.value))
+  }
+
+  const handleInputDetailsChange = e => {
+    setTemplateParams((templateParams["from_message"] = e.target.value))
+  }
+
+  const handleInputFileChange = e => {
+    console.log(e)
+  }
 
   const handleSubmit = event => {
     event.preventDefault()
 
-    window.Email.send({
-      Host: "smtp.yourisp.com",
-      Username: "username",
-      Password: "password",
-      To: "flutters.ukraine@gmail.com",
-      From: "you@isp.com",
-      Subject: "This is the subject",
-      Body: "And this is the body",
-    }).then(message => alert(message))
+    // emailjs
+    //   .sendForm(
+    //     "service_d2ne6pu",
+    //     "template_vhr1ego",
+    //     form.current,
+    //     "-Tk9BuqG_XddgZtIY"
+    //   )
+    //   .then(
+    //     result => {
+    //       console.log(result.text)
+    //     },
+    //     error => {
+    //       console.log(error.text)
+    //     }
+    //   )
+
+    emailjs
+      .send(
+        "service_d2ne6pu",
+        "template_vhr1ego",
+        templateParams,
+        "-Tk9BuqG_XddgZtIY"
+      )
+      .then(
+        result => {
+          console.log(result.text)
+        },
+        error => {
+          console.log(error.text)
+        }
+      )
+
+    event.target.reset()
 
     console.log("form submitted ✅")
-    alert("form submiotted ✅")
   }
 
   return (
@@ -83,7 +128,7 @@ const Footer = () => {
             <FooterTitle>{"Let's create something together?"}</FooterTitle>
           </FooterTitleWrapper>
         </FooterHead>
-        <FormWrapper onSubmit={handleSubmit}>
+        <FormWrapper onSubmit={handleSubmit} ref={form}>
           <FooterBody>
             <LookForUsWrapper>
               <LookForUsTitle>{"Look for us on"}</LookForUsTitle>
@@ -119,6 +164,7 @@ const Footer = () => {
                       setApplicationDevelopmentService(true)
                     }
                   }}
+                  name="option1"
                 >
                   {`${services[0]}`}
                 </ContactFormService>
@@ -131,6 +177,7 @@ const Footer = () => {
                       setDevelopmentAdviceService(true)
                     }
                   }}
+                  name="option2"
                 >
                   {`${services[1]}`}
                 </ContactFormService>
@@ -143,6 +190,7 @@ const Footer = () => {
                       setMigrationService(true)
                     }
                   }}
+                  name="option3"
                 >
                   {`${services[2]}`}
                 </ContactFormService>
@@ -150,13 +198,13 @@ const Footer = () => {
               <ContactForm>
                 <ContactFormBlock>
                   <ContactFormInputGroup>
-                    <ContactFormInput required type="text" />
+                    <ContactFormInput required type="text" name="from_name" />
                     <ContactFormInputHighlight />
                     <ContactFormInputBar />
                     <ContactFormInputLabel>{"Name"}</ContactFormInputLabel>
                   </ContactFormInputGroup>
                   <ContactFormInputGroup>
-                    <ContactFormInput required type="email" />
+                    <ContactFormInput required type="text" name="user_email" />
                     <ContactFormInputHighlight />
                     <ContactFormInputBar />
                     <ContactFormInputLabel>{"Email"}</ContactFormInputLabel>
@@ -165,13 +213,28 @@ const Footer = () => {
                 <ContactFormBlock>
                   <ContactFormDetailsInputWrapper>
                     <ContactFormInputGroup>
-                      <ContactFormInput type="text" style={{ width: "100%" }} />
+                      <ContactFormTextArea
+                        type="text"
+                        style={{ width: "100%" }}
+                        name="message"
+                        rows="1"
+                      />
                       <ContactFormInputHighlight />
                       <ContactFormInputBar />
                       <ContactFormInputLabel>
                         {"Project details (optional)"}
                       </ContactFormInputLabel>
-                      <img src={pinIcon} height={25} />
+                      <ImageUploadWrapper>
+                        <FileInputLabel htmlFor="file-input">
+                          <img src={pinIcon} height={25} />
+                        </FileInputLabel>
+                        <FileInput
+                          id="file-input"
+                          type="file"
+                          name="attached_file"
+                          onChange={handleInputFileChange}
+                        ></FileInput>
+                      </ImageUploadWrapper>
                     </ContactFormInputGroup>
                   </ContactFormDetailsInputWrapper>
                 </ContactFormBlock>

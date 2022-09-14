@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 export const ScrollDownWrapper = styled.div`
   position: absolute;
-  bottom: 50px;
+  bottom: 100px;
   display: flex;
   left: 100;
   align-items: center;

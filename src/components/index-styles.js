@@ -4,6 +4,7 @@ import styled from "styled-components"
 export const FullScreenBlock = styled.div`
   height: 100vh;
   margin-bottom: 100px;
+  min-height: 1300px;
 `
 
 //note: footer has own padding
