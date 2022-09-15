@@ -300,3 +300,7 @@ export const ImageUploadWrapper = styled.div`
 export const FileInputLabel = styled.label``
 
 export const FileInput = styled.input``
+
+export const HiddenChechbox = styled.chechbox`
+  display: none;
+`

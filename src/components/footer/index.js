@@ -31,6 +31,7 @@ import {
   ImageUploadWrapper,
   FileInputLabel,
   FileInput,
+  HiddenChechbox,
 } from "./footer-styles"
 import ActionButtonComponent from "../action-button"
 import behanceIcon from "../../images/icons/behance.svg"
@@ -55,48 +56,32 @@ const Footer = () => {
   const [developmentAdviceService, setDevelopmentAdviceService] =
     useState(false)
   const [migrationService, setMigrationService] = useState(false)
-  const [templateParams, setTemplateParams] = useState({})
+  // const [templateParams, setTemplateParams] = useState({})
 
-  const handleInputNameChange = e => {
-    setTemplateParams((templateParams["from_name"] = e.target.value))
-  }
+  // const handleInputNameChange = e => {
+  //   setTemplateParams((templateParams["from_name"] = e.target.value))
+  // }
 
-  const handleInputEmailChange = e => {
-    setTemplateParams((templateParams["from_email"] = e.target.value))
-  }
+  // const handleInputEmailChange = e => {
+  //   setTemplateParams((templateParams["from_email"] = e.target.value))
+  // }
 
-  const handleInputDetailsChange = e => {
-    setTemplateParams((templateParams["from_message"] = e.target.value))
-  }
+  // const handleInputDetailsChange = e => {
+  //   setTemplateParams((templateParams["from_message"] = e.target.value))
+  // }
 
-  const handleInputFileChange = e => {
-    console.log(e)
-  }
+  // const handleInputFileChange = e => {
+  //   console.log(e)
+  // }
 
   const handleSubmit = event => {
     event.preventDefault()
 
-    // emailjs
-    //   .sendForm(
-    //     "service_d2ne6pu",
-    //     "template_vhr1ego",
-    //     form.current,
-    //     "-Tk9BuqG_XddgZtIY"
-    //   )
-    //   .then(
-    //     result => {
-    //       console.log(result.text)
-    //     },
-    //     error => {
-    //       console.log(error.text)
-    //     }
-    //   )
-
     emailjs
-      .send(
+      .sendForm(
         "service_d2ne6pu",
         "template_vhr1ego",
-        templateParams,
+        form.current,
         "-Tk9BuqG_XddgZtIY"
       )
       .then(
@@ -107,6 +92,7 @@ const Footer = () => {
           console.log(error.text)
         }
       )
+
 
     event.target.reset()
 
@@ -224,7 +210,7 @@ const Footer = () => {
                       <ContactFormInputLabel>
                         {"Project details (optional)"}
                       </ContactFormInputLabel>
-                      <ImageUploadWrapper>
+                      {/* <ImageUploadWrapper>
                         <FileInputLabel htmlFor="file-input">
                           <img src={pinIcon} height={25} />
                         </FileInputLabel>
@@ -234,7 +220,7 @@ const Footer = () => {
                           name="attached_file"
                           onChange={handleInputFileChange}
                         ></FileInput>
-                      </ImageUploadWrapper>
+                      </ImageUploadWrapper> */}
                     </ContactFormInputGroup>
                   </ContactFormDetailsInputWrapper>
                 </ContactFormBlock>
@@ -250,6 +236,7 @@ const Footer = () => {
               type="submit"
             ></ActionButtonComponent>
           </FooterBottom>
+          <HiddenChechbox></HiddenChechbox>
         </FormWrapper>
       </FooterWrapper>
     </>

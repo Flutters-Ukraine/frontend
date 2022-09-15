@@ -38,9 +38,9 @@ const Header = () => {
             <NavItem>
               <NavLink href="#aboutServices">Services</NavLink>
             </NavItem>
-            <NavItem>
+            {/* <NavItem>
               <NavLink>Our Work</NavLink>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
               <NavLink href="#contactUs">Contact Us</NavLink>
             </NavItem>
