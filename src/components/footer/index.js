@@ -31,7 +31,7 @@ import {
   ImageUploadWrapper,
   FileInputLabel,
   FileInput,
-  HiddenChechbox,
+  HiddenCheckbox,
 } from "./footer-styles"
 import ActionButtonComponent from "../action-button"
 import behanceIcon from "../../images/icons/behance.svg"
@@ -44,6 +44,9 @@ import emailjs from "@emailjs/browser"
 
 const Footer = () => {
   const form = useRef()
+  const [checkboxValue1, setCheckboxValue1] = useState(false)
+  const [checkboxValue2, setCheckboxValue2] = useState(false)
+  const [checkboxValue3, setCheckboxValue3] = useState(false)
 
   const services = [
     "Application development",
@@ -92,7 +95,6 @@ const Footer = () => {
           console.log(error.text)
         }
       )
-
 
     event.target.reset()
 
@@ -146,8 +148,10 @@ const Footer = () => {
                   onClick={() => {
                     if (applicationDevelopmentService) {
                       setApplicationDevelopmentService(false)
+                      setCheckboxValue1(false)
                     } else {
                       setApplicationDevelopmentService(true)
+                      setCheckboxValue1(true)
                     }
                   }}
                   name="option1"
@@ -159,8 +163,10 @@ const Footer = () => {
                   onClick={() => {
                     if (developmentAdviceService) {
                       setDevelopmentAdviceService(false)
+                      setCheckboxValue2(false)
                     } else {
                       setDevelopmentAdviceService(true)
+                      setCheckboxValue2(true)
                     }
                   }}
                   name="option2"
@@ -172,8 +178,10 @@ const Footer = () => {
                   onClick={() => {
                     if (migrationService) {
                       setMigrationService(false)
+                      setCheckboxValue3(false)
                     } else {
                       setMigrationService(true)
+                      setCheckboxValue3(true)
                     }
                   }}
                   name="option3"
@@ -236,7 +244,21 @@ const Footer = () => {
               type="submit"
             ></ActionButtonComponent>
           </FooterBottom>
-          <HiddenChechbox></HiddenChechbox>
+          <HiddenCheckbox
+            checked={checkboxValue1}
+            onChange={() => setCheckboxValue1(!checkboxValue1)}
+            name="option1"
+          ></HiddenCheckbox>
+          <HiddenCheckbox
+            checked={checkboxValue2}
+            onChange={() => setCheckboxValue1(!checkboxValue2)}
+            name="option2"
+          ></HiddenCheckbox>
+          <HiddenCheckbox
+            checked={checkboxValue3}
+            onChange={() => setCheckboxValue1(!checkboxValue3)}
+            name="option3"
+          ></HiddenCheckbox>
         </FormWrapper>
       </FooterWrapper>
     </>

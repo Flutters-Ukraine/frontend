@@ -169,6 +169,22 @@ export const ContactFormBlock = styled.div`
   }
 `
 
+export const ContactFormInputBar = styled.span`
+  position: relative;
+  display: block;
+
+  &:before {
+    content: "";
+    height: 2px;
+    width: 0;
+    bottom: 0px;
+    position: absolute;
+    background: var(--color-action);
+    transition: 300ms ease all;
+    left: 0%;
+  }
+`
+
 export const ContactFormInput = styled.input`
   background: none;
   padding: 10px 10px 10px 5px;
@@ -241,22 +257,6 @@ export const ContactFormInputGroup = styled.div`
 
 export const ContactFormInputHighlight = styled.span``
 
-export const ContactFormInputBar = styled.span`
-  position: relative;
-  display: block;
-
-  &:before {
-    content: "";
-    height: 2px;
-    width: 0;
-    bottom: 0px;
-    position: absolute;
-    background: var(--color-action);
-    transition: 300ms ease all;
-    left: 0%;
-  }
-`
-
 export const ContactFormInputLabel = styled.label`
   color: black;
   font-size: 16px;
@@ -301,6 +301,6 @@ export const FileInputLabel = styled.label``
 
 export const FileInput = styled.input``
 
-export const HiddenChechbox = styled.chechbox`
+export const HiddenCheckbox = styled.input.attrs({ type: "checkbox" })`
   display: none;
 `
