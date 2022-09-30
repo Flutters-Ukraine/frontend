@@ -9,6 +9,10 @@ export const FooterWrapper = styled.footer`
   @media screen and (max-width: 960px) {
     padding: 0 50px;
   }
+
+  @media screen and (max-width: 500px) {
+    padding-top: 50px;
+  }
 `
 
 export const FooterHead = styled.div`

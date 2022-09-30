@@ -80,6 +80,15 @@ export const GridContainer = styled.div`
     grid-column: 16/19;
     grid-row: 8/10;
   }
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+
+    grid-template-rows: 1fr;
+    & img {
+      max-height: 100px;
+    }
+  }
 `
 
 export const ActionTextWrapper = styled.div`
@@ -93,7 +102,7 @@ export const ActionTextWrapper = styled.div`
   align-items: center;
   vertical-align: middle;
   height: 100%;
-  padding: 30px 0;
+  padding: 30px 10px;
 `
 
 export const ActionText = styled.span`
